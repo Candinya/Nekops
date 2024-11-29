@@ -6,7 +6,7 @@ const ShellWindowLabel = "nekopshell"; // Nekops Shell
  * Open (or create if non-current) Shell Window
  */
 export const openShellWindow = async () => {
-  let shellWindow = WebviewWindow.getByLabel(ShellWindowLabel);
+  let shellWindow = await WebviewWindow.getByLabel(ShellWindowLabel);
   if (shellWindow === null) {
     // Open new
     shellWindow = new WebviewWindow(ShellWindowLabel, {
